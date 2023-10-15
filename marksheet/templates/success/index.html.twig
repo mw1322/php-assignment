@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Success{% endblock %}
+
+{% block body %}
+<style>
+.box {
+  background-color: #e9ecee;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 122px;
+  color: #152733;
+  flex-direction: column;
+}
+
+/* form {
+  background-color: white;
+  padding: 12px;
+  border-radius: 5%;
+} */
+
+table {
+  border: 2px solid;
+}
+table,
+th,
+td {
+  border: 2px solid;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+table {
+  width: 90%;
+  margin-top: 32px;
+  padding: 4px;
+}
+
+td,
+th {
+  padding: 3px;
+}
+{# .box {
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+} #}
+
+</style>
+
+{# <p>
+    Form successfully submitted.
+</p> #}
+<div class ="box">
+<table class="main" style="border: 2px solid;">
+            <tr colspan="4">
+                <th colspan="4">Chitkara University</th>
+            </tr>
+
+            <tr>
+                <td>Class : </td>
+                <td>IX</td>
+                <td>Session</td>
+                <td>2019-20</td>
+            </tr>
+             <tr>
+                    <td>Roll No:</td>
+                    <td>{{ data['info']['rollno']  }}</td>
+                    <td>Date of Birth</td>
+                    <td>{{data['info']['dob'] }}</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{data['info']['name']}}</td>
+                    <td>Father's Name</td>
+                    <td>{{data['info']['fname']}}</td>
+                </tr>
+               
+            </table> 
+            <table style=" border: 2px solid;">
+
+            <tr>
+                <th>Subjects</th>
+                <th>Total Marks</th>
+                <th>Passing Marks</th>
+                <th>Marks Obtained</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                    <td>Math</td>
+                    <td>100</td>
+                    <td>35</td>
+                    <td>{{data['marks']['math']}}</td>
+                    <td>{{data['grade']['math_grade']}}</td>
+            </tr>
+            
+             <tr>
+                    <td>Physics</td>
+                    <td>100</td>
+                    <td>35</td>
+                    <td>{{data['marks']['physics']}}</td>                    
+                    <td>{{data['grade']['phy_grade']}}</td>
+            </tr>
+             <tr>
+                    <td>English</td>
+                    <td>100</td>
+                    <td>35</td>
+                    <td>{{data['marks']['english']}}</td>                    
+                    <td>{{data['grade']['eng_grade']}}</td>
+            </tr>
+             <tr>
+                    <td>Biolgy</td>
+                    <td>100</td>
+                    <td>35</td>
+                    <td>{{data['marks']['biology']}}</td>                    
+                    <td>{{data['grade']['bio_grade']}}</td>
+            </tr>
+             <tr>
+                    <td>Chemistry</td>
+                    <td>100</td>
+                    <td>35</td>
+                    <td>{{data['marks']['chemistry']}}</td>                    
+                    <td>{{data['grade']['chem_grade']}}</td>
+            </tr>
+              
+            </table>
+            <table>
+
+            <tr>
+                <th>Total Marks : </th>
+                <td>500</td>
+                <th>Obtained Marks</th>
+                <td>{{data['total']}}</td>
+            </tr>
+            <tr>
+                <th>Passing Marks:</th>
+                <td>300</td>
+                <th>Percentage:</th>
+                <td>{{data['percent']}}</td>
+            </tr>
+            <tr>
+                <th>Result:</th>
+                <td>{{data['passfail']}}</td>
+                <th>Grade</th>
+                <td>{{data['grades']}}</td>
+            </tr> 
+        </table>
+        </div>
+        <br>
+
+<p>
+    {# {{ rollno }}  #}
+</p>
+
+
+{% endblock %}
+
+ 

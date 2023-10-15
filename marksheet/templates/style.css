@@ -1,0 +1,9 @@
+.checkbox-label {
+  margin-right: 10px; /* Add space between the checkbox and the label */
+}
+.box {
+  background-color: red;
+}
+body {
+  background-color: aqua;
+}

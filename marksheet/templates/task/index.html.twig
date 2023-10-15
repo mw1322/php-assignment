@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if app.user %}
+        Marksheet Form
+    {% else %}
+        Please Log In
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <br>
+        {% if app.user %}
+            {{ form_start(rollno_form) }}
+            {{ form_widget(rollno_form) }}
+
+            <input type="submit" value="Submit" class="btn btn-success">
+            {# {{ app.user.email }} #}
+
+            {{ form_end(rollno_form) }}
+        {% else %}
+            <h2>Please log in</h2>
+        {% endif %}
+    </div>
+{% endblock %}
